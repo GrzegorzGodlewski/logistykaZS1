@@ -21,3 +21,15 @@ Route::get('/hello', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/user/create','UserController@create');
+Route::post('/user','UserController@store');
